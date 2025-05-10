@@ -11,7 +11,7 @@ const app = express();
 const server = http.createServer(app);
 
 // Allow multiple origins for CORS
-const allowedOrigins = (process.env.FRONTEND_URL || 'http://localhost:5173').split(',');
+const allowedOrigins = ( "*" ||process.env.FRONTEND_URL || 'http://localhost:5173').split(',');
 
 app.use(cors({
   origin: function(origin, callback) {
