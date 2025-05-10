@@ -27,6 +27,7 @@ export default function VideoChat() {
     const socketRef = useRef();
     const { currentUser } = useAuth();
     const navigate = useNavigate();
+    console.log(import.meta.env.VITE_API_URL)
 
     useEffect(() => {
         if (!currentUser) {
